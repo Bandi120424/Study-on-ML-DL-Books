@@ -80,6 +80,13 @@ def f(x):
     C = Square()
     return C(B(A(x)))
 
+#########Example########
+func = Function()
+print("type of func", type(func))
+'''Result
+type of func <class '__main__.Function'>
+'''
+
 g = Square()
 x1 = Variable(np.array(2.0))
 dy1 = numerical_diff(g, x1)
@@ -87,17 +94,19 @@ print("type of g", type(g))
 print("type of x1", type(x1))
 print("numerical diff of square function g {:.2f}".format(dy1))
 
+'''Result
+type of g <class '__main__.Square'>
+type of x1 <class '__main__.Variable'>
+numerical diff of square function g 4.00
+'''
+
 x2 = Variable(np.array(0.5))
 dy2 = numerical_diff(f, x2)
 print("type of f", type(f))
 print("type of x2", type(x2))
 print("numerical diff of square function f {:.2f}".format(dy2))
 
-
 '''Result
-type of g <class '__main__.Square'>
-type of x1 <class '__main__.Variable'>
-numerical diff of square function g 4.00
 type of f <class 'function'>
 type of x2 <class '__main__.Variable'>
 numerical diff of square function f 3.30
